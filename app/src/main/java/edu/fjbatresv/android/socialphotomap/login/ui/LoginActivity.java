@@ -19,8 +19,7 @@ import butterknife.OnClick;
 import edu.fjbatresv.android.socialphotomap.R;
 import edu.fjbatresv.android.socialphotomap.SocialPhotoMapApp;
 import edu.fjbatresv.android.socialphotomap.login.LoginPresenter;
-import edu.fjbatresv.android.socialphotomap.login.events.LoginEvent;
-import edu.fjbatresv.android.socialphotomap.main.MainActivity;
+import edu.fjbatresv.android.socialphotomap.main.ui.MainActivity;
 
 public class LoginActivity extends AppCompatActivity implements LoginView {
     @Bind(R.id.txtEmail)

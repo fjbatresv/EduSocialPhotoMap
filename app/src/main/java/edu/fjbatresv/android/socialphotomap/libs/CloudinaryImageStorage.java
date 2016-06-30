@@ -41,6 +41,9 @@ public class CloudinaryImageStorage implements ImageStorage {
                 } catch (IOException e) {
                     Log.e("CloudinaryUpload", e.toString());
                     listener.onError(e.getLocalizedMessage());
+                } catch (Exception e){
+                    Log.e("CloudinaryUpload", e.toString());
+                    listener.onError(e.getLocalizedMessage());
                 }
                 return null;
             }

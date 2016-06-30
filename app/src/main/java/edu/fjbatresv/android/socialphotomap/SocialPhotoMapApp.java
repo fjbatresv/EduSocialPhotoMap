@@ -1,15 +1,23 @@
 package edu.fjbatresv.android.socialphotomap;
 
 import android.app.Application;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 
 import com.firebase.client.Firebase;
 
 import edu.fjbatresv.android.socialphotomap.domain.DI.DomainModule;
 import edu.fjbatresv.android.socialphotomap.libs.DI.LibsModule;
+
 import edu.fjbatresv.android.socialphotomap.login.DI.DaggerLoginComponent;
 import edu.fjbatresv.android.socialphotomap.login.DI.LoginComponent;
 import edu.fjbatresv.android.socialphotomap.login.DI.LoginModule;
 import edu.fjbatresv.android.socialphotomap.login.ui.LoginView;
+
+import edu.fjbatresv.android.socialphotomap.main.DI.DaggerMainComponent;
+import edu.fjbatresv.android.socialphotomap.main.DI.MainComponent;
+import edu.fjbatresv.android.socialphotomap.main.DI.MainModule;
+import edu.fjbatresv.android.socialphotomap.main.ui.MainView;
 
 /**
  * Created by javie on 28/06/2016.
@@ -45,6 +53,15 @@ public class SocialPhotoMapApp extends Application {
                 .domainModule(domainModule)
                 .libsModule(new LibsModule(null))
                 .loginModule(new LoginModule(view))
+                .build();
+    }
+    public MainComponent getMainComponent(MainView view, FragmentManager manager, Fragment[] fragments, String[] titles){
+        return DaggerMainComponent
+                .builder()
+                .socialPhotoMapModule(socialPhotoMapModule)
+                .domainModule(domainModule)
+                .libsModule(new LibsModule(null))
+                .mainModule(new MainModule(view, manager, fragments, titles))
                 .build();
     }
 
