@@ -14,14 +14,14 @@ import java.util.List;
  */
 public class Util {
     private Geocoder geocoder;
-    private final static String gravatarUrl = "http://www.gravatar.com/avatar";
+    private final static String gravatarUrl = "http://gravatar.com/avatar/";
 
     public Util(Geocoder geocoder) {
         this.geocoder = geocoder;
     }
 
     public String getavatarUrl(String email){
-        return gravatarUrl+md5(email)+"?s=64";
+        return gravatarUrl + md5(email) + "?s=64";
     }
 
     private static final String md5(final String s){

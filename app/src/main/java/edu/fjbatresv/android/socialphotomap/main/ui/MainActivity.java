@@ -13,9 +13,6 @@ import android.os.Build;
 import android.os.Environment;
 import android.os.Parcelable;
 import android.provider.MediaStore;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
@@ -48,13 +45,12 @@ import javax.inject.Inject;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import edu.fjbatresv.android.socialphotomap.FotoListFragment;
-import edu.fjbatresv.android.socialphotomap.FotoMapFragment;
+import edu.fjbatresv.android.socialphotomap.photoList.ui.FotoListFragment;
+import edu.fjbatresv.android.socialphotomap.photoMap.ui.FotoMapFragment;
 import edu.fjbatresv.android.socialphotomap.R;
 import edu.fjbatresv.android.socialphotomap.SocialPhotoMapApp;
 import edu.fjbatresv.android.socialphotomap.login.ui.LoginActivity;
 import edu.fjbatresv.android.socialphotomap.main.MainPresenter;
-import edu.fjbatresv.android.socialphotomap.main.events.MainEvent;
 import edu.fjbatresv.android.socialphotomap.main.ui.adapters.MainSectionsPagerAdapter;
 
 public class MainActivity extends AppCompatActivity implements MainView,

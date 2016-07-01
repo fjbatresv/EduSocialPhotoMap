@@ -22,9 +22,9 @@ public class GlideImageLoader implements ImageLoader {
     public void load(ImageView imgAvatar, String s) {
         glideRequestManager
                 .load(s)
-        .diskCacheStrategy(DiskCacheStrategy.ALL)
-        .centerCrop()
-        .override(600, 400)
-        .into(imgAvatar);
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .centerCrop()
+                .override(700, 700)
+                .into(imgAvatar);
     }
 }
